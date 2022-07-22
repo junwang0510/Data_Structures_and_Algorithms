@@ -2,7 +2,7 @@
 
 Fundamental data structures and algorithms covered in undergraduate-level CS courses.
 
-For content reference: check the syllabus for CSE332 and CSE421 offered by the University of Washington.
+For content reference: check the syllabus for CSE143, CSE332, and CSE421 offered by the University of Washington.
 
 (Extra topics may be contained)
 
