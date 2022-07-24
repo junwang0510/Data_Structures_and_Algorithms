@@ -1,6 +1,6 @@
 package Sorting;
 
-public class TestSorting extends SelectionSort { // change the extended class for different sorting
+public class TestSorting extends DutchNationalFlag { // change the extended class for different sorting
     public static void main(String[] args) {
         int[] arr = {-1, 2, 3, 10, 5, 8, 0, 1, -23, -50, 17, 28, 3, 0};
         System.out.println("Before Sorting:");
