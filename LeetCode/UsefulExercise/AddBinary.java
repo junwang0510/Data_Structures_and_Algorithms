@@ -2,7 +2,6 @@ package LeetCode.UsefulExercise;
 
 public class AddBinary {
     public String addBinary(String a, String b) {
-        // Prefer StringBuilder when doing string concatenation
         StringBuilder result = new StringBuilder();
         // Starting from the end (the least significant digit)
         int aIndex = a.length() - 1;
