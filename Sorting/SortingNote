@@ -1,3 +1,10 @@
-<img src="/Users/junwang/Desktop/decision_tree_sorting.png" width="75" height="75">
-
-Hello World!
+<h2>
+    Why is the worst-case runtime of comparison sorting O(n*log(n))?
+</h2>
+<img src="decision_tree_sorting.png" width="50" height="50" alt="image of a example decision tree">
+<ul>
+    <li>Model a decision tree as shown in the picture</li>
+    <li>Total # of decisions for n elements = n!</li>
+    <li>In the worst case, # of decisions = log(n!)</li>
+    <li>Therefore, the worst case runtime of comparison sorting = O(log(n!)) = O(n*log(n))</li>
+</ul>
