@@ -7,6 +7,12 @@ public class DutchNationalFlag {
     followed by all of the zeros (== 0), followed by all of the positive (> 0) elements.
      */
 
+    /*
+    Runtime: O(n)
+    In-place: yes
+    Stable: no
+     */
+
     public static void sort(int[] arr) {
         // break into 4 sections: <0, =0, unknown, >0 with i, j, and k
         int i = 0;

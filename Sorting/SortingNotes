@@ -1,5 +1,12 @@
 Why is the worst-case runtime of comparison sorting O(n*log(n))?
-• Model a decision tree as shown in the picture
-• Total # of decisions for n elements = n!
-• In the worst case, # of decisions = log(n!)
-• Therefore, the worst case runtime of comparison sorting = O(log(n!)) = O(n*log(n))
+- Model a decision tree as shown in the picture
+- Total # of decisions for n elements = n!
+- In the worst case, # of decisions = log(n!)
+- Therefore, the worst case runtime of comparison sorting = O(log(n!)) = O(n*log(n))
+
+
+Insertion sort vs. Selection sort
+- Selection sort requires less swapping
+- Insertion sort is faster for almost sorted data
+- On average, we prefer insertion sort for small arrays;
+  However, if overwriting data is expensive, we would prefer selection sort

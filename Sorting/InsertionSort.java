@@ -19,13 +19,13 @@ public class InsertionSort {
         for (int end = 1; end < N; end++) {
             int curr = end;
             while (curr - 1 >= 0 && arr[curr - 1] > arr[curr]) {
-                swap(curr, curr - 1, arr);
+                swap(arr, curr, curr - 1);
                 curr--;
             }
         }
     }
 
-    public static void swap(int i, int j, int[] arr) {
+    public static void swap(int[] arr, int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;

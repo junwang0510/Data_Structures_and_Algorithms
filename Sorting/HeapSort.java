@@ -3,9 +3,7 @@ package Sorting;
 public class HeapSort {
 
     /*
-    Worst-case runtime: nlogn
-    In-practice runtime: nlogn
-    Best-case runtime: nlogn
+    Runtime: O(nlogn)
     In-place: yes
     Stable: no (buildHeap ruins the order)
      */
@@ -14,23 +12,21 @@ public class HeapSort {
         if (arr == null || arr.length < 2) {
             return;
         }
-        int n = arr.length;
 
-        // Build Heap
-        for (int i = n/2 - 1; i >= 0; i--) {
-            heapify(arr, n, i);
+        int N = arr.length;
+        for (int i = N / 2 - 1; i >= 0; i--) {
+            heapify(arr, N, i);
         }
 
-        // Extract max elements from the heap
-        for (int i = n - 1; i > 0; i--) {
-            swap(arr, 0, i);
+        for (int i = N - 1; i >= 0; i--) {
+            swap(arr, i, 0);
             heapify(arr, i, 0);
         }
     }
 
     public static void heapify(int[] arr, int end, int root) {
         int curr = root;
-        int left = 2 * curr + 1;
+        int left = root * 2 + 1;
         int right = left + 1;
 
         if (left < end && arr[left] > arr[curr]) {
@@ -40,7 +36,7 @@ public class HeapSort {
             curr = right;
         }
         if (curr != root) {
-            swap(arr, root, curr);
+            swap(arr, curr, root);
             heapify(arr, end, curr);
         }
     }
