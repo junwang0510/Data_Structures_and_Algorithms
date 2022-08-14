@@ -1,8 +1,9 @@
-Why is the worst-case runtime of comparison sorting O(n*log(n))?
+Why is the lower bound runtime for comparison sorting O(n*log(n))?
+(best case excluding when elements are sorted, in which case we can run a O(n) function to check whether the sequence is sorted beforehand)
 - Model a decision tree as shown in the picture
 - Total # of decisions for n elements = n!
-- In the worst case, # of decisions = log(n!)
-- Therefore, the worst case runtime of comparison sorting = O(log(n!)) = O(n*log(n))
+- In the best case, # of decisions = log(n!)
+- Therefore, the best case runtime of comparison sorting = O(log(n!)) = O(n*log(n))
 
 
 Insertion sort vs. Selection sort
