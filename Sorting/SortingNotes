@@ -7,7 +7,7 @@ Why is the lower bound runtime for comparison sorting O(n*log(n))?
 
 
 Insertion sort vs. Selection sort
-- Selection sort requires less swapping
 - Insertion sort is faster for almost sorted data
+- Selection sort requires less swapping
 - On average, we prefer insertion sort for small arrays;
   However, if overwriting data is expensive, we would prefer selection sort
