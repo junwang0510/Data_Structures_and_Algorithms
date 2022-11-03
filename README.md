@@ -2,6 +2,6 @@
 
 • Fundamental data structures and algorithms covered in undergraduate-level CS courses.
 
-• Leetcode Practices
+• Leetcode Practices (Solutions in Java)
 
 © Jun Wang 2022
