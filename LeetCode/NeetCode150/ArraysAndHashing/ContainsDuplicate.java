@@ -1,11 +1,11 @@
-package LeetCode.NeetCode150.ArrraysAndHashing;
+package LeetCode.NeetCode150.ArraysAndHashing;
 
 import java.util.Set;
 import java.util.HashSet;
 
 class ContainsDuplicate {
     public boolean containsDuplicate(int[] nums) {
-        // Runtime:
+        // Runtime: O(n)
         // Space: O(n)
 
         // Idea: Add elements until encountering a duplicate element (if any)
