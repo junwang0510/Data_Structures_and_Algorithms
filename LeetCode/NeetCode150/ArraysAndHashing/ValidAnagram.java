@@ -13,11 +13,11 @@ class ValidAnagram {
 
         // check whether the occurrences of letters match
         for (char c : s.toCharArray()) {
-            letters[(int) (c - 'a')]++;
+            letters[c - 'a']++;
         }
 
         for (char c : t.toCharArray()) {
-            letters[(int) (c - 'a')]--;
+            letters[c - 'a']--;
         }
 
         for (int i = 0; i < letters.length; i++) {
