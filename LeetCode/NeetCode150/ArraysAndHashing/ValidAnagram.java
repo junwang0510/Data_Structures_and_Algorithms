@@ -3,7 +3,7 @@ package LeetCode.NeetCode150.ArraysAndHashing;
 class ValidAnagram {
     public boolean isAnagram(String s, String t) {
         // Runtime: O(n)
-        // Space: O(n)
+        // Space: O(1)
 
         // simple check
         if (s.length() != t.length()) return false;
