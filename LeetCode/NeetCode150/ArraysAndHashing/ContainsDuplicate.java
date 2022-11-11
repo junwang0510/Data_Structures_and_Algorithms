@@ -8,8 +8,6 @@ class ContainsDuplicate {
         // Runtime: O(n)
         // Space: O(n)
 
-        // Idea: Add elements until encountering a duplicate element (if any)
-
         // Any collection would work
         // Hashing for average O(1) runtime for .contains()
         Set<Integer> set = new HashSet<>();
