@@ -1,4 +1,4 @@
-package LeetCode.UsefulExercise;
+package UsefulExercises;
 
 public class AddBinary {
     public String addBinary(String a, String b) {

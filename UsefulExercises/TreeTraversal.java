@@ -1,4 +1,4 @@
-package LeetCode.UsefulExercise;
+package UsefulExercises;
 
 import java.util.*;
 
