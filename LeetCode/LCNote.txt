@@ -1,0 +1,1 @@
+• Java's default sorting algorithm (Dual Pivot QuickSort) has a space complexity of O(log n)
