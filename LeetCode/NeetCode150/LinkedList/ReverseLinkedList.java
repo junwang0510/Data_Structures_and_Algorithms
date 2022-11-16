@@ -27,11 +27,16 @@ public class ReverseLinkedList {
     // Space: O(n)
     public ListNode reverseList2(ListNode head) {
         // Base case
+        // 0 or 1 node is "naturally reversed"; no work need to be done
         if (head == null || head.next == null) return head;
 
         // Recursive case
+        // Simplifying the list until the base case
+        // Stop adding function call to the call stack when head.next == null or head.next.next == null
         ListNode curr = reverseList2(head.next);
+        // Make my next element point to myself
         head.next.next = head;
+        // Stop myself from pointing forward
         head.next = null;
         return curr;
     }
