@@ -40,26 +40,4 @@ public class ReverseLinkedList {
         head.next = null;
         return curr;
     }
-
-
-    /**
-     * A node in a singly-linked list
-     */
-    private static class ListNode {
-        public int val;
-        public ListNode next;
-
-        public ListNode() {
-            new ListNode(0, null);
-        }
-
-        public ListNode(int val) {
-            new ListNode(val, null);
-        }
-
-        public ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
 }
