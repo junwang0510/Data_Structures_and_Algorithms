@@ -4,4 +4,4 @@
 
 • Leetcode Practices (Solutions in Java)
 
-&copy; Jun Wang 2022
+`ⓒ Jun Wang 2022`
