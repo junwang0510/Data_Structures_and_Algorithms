@@ -4,4 +4,4 @@
 
 • Leetcode Practices (Solutions in Java)
 
-© Jun Wang 2022
+&copy; Jun Wang 2022
