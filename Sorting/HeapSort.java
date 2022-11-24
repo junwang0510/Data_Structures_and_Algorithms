@@ -9,39 +9,39 @@ public class HeapSort {
      */
 
     public static void sort(int[] arr) {
-        if (arr == null || arr.length < 2) {
-            return;
-        }
+        int n = arr.length;
+        if (n < 2) return;
 
-        int N = arr.length;
-        for (int i = N / 2 - 1; i >= 0; i--) {
-            heapify(arr, N, i);
-        }
+        // Floyd's Build Heap Algorithm (max heap)
+        for (int i = n / 2 - 1; i >= 0; i--)
+            heapify(arr, i, n);
 
-        for (int i = N - 1; i >= 0; i--) {
-            swap(arr, i, 0);
-            heapify(arr, i, 0);
+        // move larger values to the end
+        for (int i = n - 1; i > 0; i--) {
+            swap(arr, 0, i);
+            heapify(arr, 0, i);
         }
     }
 
-    public static void heapify(int[] arr, int end, int root) {
-        int curr = root;
-        int left = root * 2 + 1;
-        int right = left + 1;
+    private static void heapify(int[] arr, int i, int n) {
+        // pick the largest of three
+        int largest = i;
+        int l = 2 * i + 1;
+        int r = l + 1;
 
-        if (left < end && arr[left] > arr[curr]) {
-            curr = left;
-        }
-        if (right < end && arr[right] > arr[curr]) {
-            curr = right;
-        }
-        if (curr != root) {
-            swap(arr, curr, root);
-            heapify(arr, end, curr);
+        if (l < n && arr[l] > arr[largest])
+            largest = l;
+        if (r < n && arr[r] > arr[largest])
+            largest = r;
+
+        // continue to check if percolation is needed if percolated
+        if (largest != i) {
+            swap(arr, i, largest);
+            heapify(arr, largest, n);
         }
     }
 
-    public static void swap(int[] arr, int i, int j) {
+    private static void swap(int[] arr, int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;

@@ -1,10 +1,7 @@
 package Sorting;
 
-import java.util.Arrays;
-
 public class Sort {
     public static void sort(int[] arr) {
-
     }
 
     private static void swap(int[] arr, int i, int j) {
