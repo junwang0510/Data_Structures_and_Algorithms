@@ -10,4 +10,3 @@
 ## Useful Methods
 - Arrays.copyOf(arr, len);  // don't forget to specify the length of the new array!
 - Collections.sort(nums, Collections.reverseOrder()); // Sort a Collection in descending order
-- 
