@@ -1,3 +1,0 @@
-• Java's default sorting algorithm (Dual Pivot QuickSort) has a space complexity of O(log n)
-• Arrays.copyOf(arr, len);  // don't forget to specify the length of the new array!
-• Always store the old size of the DS to prevent errors due to later modification of the DS
