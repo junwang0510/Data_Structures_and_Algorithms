@@ -1,6 +1,7 @@
 package LeetCode.NeetCode150.PriorityQueue;
 
 import java.util.PriorityQueue;
+import java.util.Arrays;
 
 public class KthLargest {
     // Runtime: O(nlogk)
@@ -12,7 +13,16 @@ public class KthLargest {
     public KthLargest(int k, int[] nums) {
         ct = k;
         pq = new PriorityQueue<>();
-        sort(nums);
+        Arrays.sort(nums);
+        int l = 0;
+        int r = nums.length - 1;
+        while (l < r) {
+            int temp = nums[l];
+            nums[l] = nums[r];
+            nums[r] = temp;
+            l++;
+            r--;
+        }
         for (int i = 0; i < Math.min(ct, nums.length); i++) {
             pq.add(nums[i]);
         }
