@@ -1,55 +1,38 @@
 package LeetCode;
 
+import java.util.*;
+
 // Solutions from LeetCode Practices / Contests
 
 class Solution {
-    /**
-     * Select a set of non-overlapping substrings from the string s that satisfy the following conditions:
-     * 1. The length of each substring is at least k.
-     * 2. Each substring is a palindrome.
-     *
-     * @param s the input String
-     * @param k minimum length of each substring
-     * @return the maximum number of substrings in an optimal selection
-     */
-    public int maxPalindromes(String s, int k) {
-        StringBuilder curr = new StringBuilder();
-        int count = 0;
+    public boolean wordPattern(String pattern, String s) {
+        // Time: O(n)
+        // Space: O(m); m = # of unique words in s
 
-        for (int i = 0; i < s.length(); i++) {
-            curr.append(s.charAt(i));
-            if (curr.length() >= k) {
-                // get the minimum-requirement substring for the current String
-                for (int j = 0; j < curr.length(); j++) {
-                    String sub = curr.substring(j);
-                    if (sub.length() >= k && isPalindrome(sub)) {
-                        count++;
-                        curr = new StringBuilder();
-                    }
+        String[] arr = s.split(" ");
+        Map<Character, String> map = new HashMap<>();
+        Set<String> mapped = new HashSet<>();
+
+        if (arr.length != pattern.length())
+            return false;
+
+        for (int i = 0; i < pattern.length(); i++) {
+            char c = pattern.charAt(i);
+            String str = arr[i];
+
+            // if there is no previous mapping for the character
+            if (!map.containsKey(c)) {
+                if (mapped.contains(str)) {
+                    return false;
+                }
+                mapped.add(str);
+                map.put(c, str);
+            } else {
+                // if the previous mapping if not equal to the current string
+                if (!map.get(c).equals(str)) {
+                    return false;
                 }
             }
-        }
-
-        return count;
-    }
-
-    /**
-     * Check if a given String is a palindrome
-     *
-     * @param s the input String
-     * @return true if s is a palindrome; false otherwise
-     */
-    private boolean isPalindrome(String s) {
-        if (s.length() == 1) return true;
-
-        int l = 0;
-        int r = s.length() - 1;
-        while (l < r) {
-            if (s.charAt(l) != s.charAt(r)) {
-                return false;
-            }
-            l++;
-            r--;
         }
 
         return true;
