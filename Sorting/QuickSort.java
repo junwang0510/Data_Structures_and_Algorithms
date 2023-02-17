@@ -14,25 +14,29 @@ public class QuickSort {
     }
 
     private static void quickSort(int[] arr, int lo, int hi) {
-        // recursively split into two halves based on the chosen pivot
         if (lo < hi) {
-            int pivot = partition(arr, lo, hi);
-            quickSort(arr, lo, pivot - 1);
+            int pivot = hoarePartition(arr, lo, hi);
+            quickSort(arr, lo, pivot);
             quickSort(arr, pivot + 1, hi);
         }
     }
 
-    private static int partition(int[] arr, int lo, int hi) {
-        int pivot = arr[hi];
+    private static int hoarePartition(int[] arr, int lo, int hi) {
+        int pivot = arr[lo + (hi - lo) / 2];
         int i = lo - 1;
-        for (int j = lo; j < hi; j++) {
-            if (arr[j] <= pivot) {
+        int j = hi + 1;
+        while (true) {
+            do {
                 i++;
-                swap(arr, i, j);
+            } while (arr[i] < pivot);
+            do {
+                j--;
+            } while (arr[j] > pivot);
+            if (i >= j) {
+                return j;
             }
+            swap(arr, i, j);
         }
-        swap(arr, i + 1, hi);
-        return i + 1;
     }
 
     private static void swap(int[] arr, int i, int j) {

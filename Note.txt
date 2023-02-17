@@ -1,0 +1,27 @@
+ORDERING
+
+// Map
+public static void main(String[] args) {
+    // Order by key (reverse)
+    Map<String, Integer> map = new TreeMap<>(Comparator.reverseOrder());
+
+    map.put("John", 25);
+    map.put("Jane", 30);
+    map.put("Jim", 20);
+
+    for (Map.Entry<String, Integer> entry : map.entrySet()) System.out.println(entry.getKey() + " " + entry.getValue());
+
+
+    // Order by value
+    List<Map.Entry<String, Integer>> list = new ArrayList<>(map.entrySet());
+    Collections.sort(list, (e1, e2) -> {return e1.getValue().compareTo(e2.getValue());});
+
+    for (Map.Entry<String, Integer> e : list) System.out.println(e.getKey() + " " + e.getValue());
+}
+
+
+// Priority Queue
+Queue<Integer> q1 = new PriorityQueue<>();  // natural ordering
+Queue<Integer> q2 = new PriorityQueue<>((x, y) -> {return y - x;});  // reverse ordering
+
+
